@@ -426,7 +426,7 @@ Si ahora mismo hacemos un console.log `event.target.elements`, enviamos nuestro 
 
 Esto no nos ayuda mucho, aunque vemos que es nuestro input y nuestro botón:
 
-![PrintingOnConsole](img/printingOnConsole.png)
+![PrintingOnConsole](src/printingOnConsole.png)
 
 En su lugar, queremos obtener lo que se escribió en nuestra entrada. 
 
@@ -434,7 +434,7 @@ Para ello, podemos añadir un atributo "id" o un atributo "name" a nuestra entra
 
 Esto nos permite utilizar `event.target.elements.addTodo.value` para obtener lo que se escribió en el texto que se escribió. Cuando hacemos esto, cuando escribimos el texto en nuestra entrada, y pulsamos enviar, lo vemos registrado en la consola:
 
-![ consoleShow](img/consoleShow.gif) 
+![consoleShow](src/consoleShow.gif) 
 
 Ahora que tenemos nuestro texto, lo pondremos en una variable llamada "texto". Usando esto, queremos crear una nueva tarea. 
 
@@ -495,7 +495,7 @@ useState devuelve un array con dos elementos:
 
 Podemos desestructurar los valores que se devuelven desde useState añadiendo un conjunto de corchetes de array para obtener inmediatamente los valores que se devuelven desde él. Primero el estado y segundo, la función para actualizar el estado:
 
-![](img/consoleState.gif)
+![](src/consoleState.gif)
 
 Llamaremos a nuestra variable de estado `todos` y al setter para gestionar nuestro estado `setTodos`. 
 
@@ -503,7 +503,7 @@ Todo lo que tenemos que hacer para actualizar nuestro estado es pasarle, lo que 
 
 Y finalmente, podemos llamar a `setTodos` en la parte inferior de `handleAddTodo`. Lo bueno de esta función es que en lugar de tener que pasar también el array de todos, esta función puede darnos el estado anterior con la ayuda de una función que podemos recibir dentro de ella:
 
-![](img/setTodos.gif)
+![](src/setTodos.gif)
 
 Esto puede parecer extraño al principio, pero dentro de `setTodos` tenemos acceso a los datos anteriores de todo. Si escribimos una función de flecha o cualquier función para el caso, podemos simplemente proporcionar lo que queremos que el nuevo estado sea. 
 
@@ -579,7 +579,7 @@ function AddTodo({ setTodos }) {
 
 Tenemos una referencia directa a nuestro input, lo que significa que podemos acceder a cualquier propiedad que queramos de él. En nuestro caso, queremos tomar el valor del input en la propiedad value. Para borrar el valor de nuestro input, podemos simplemente mutar inputRef directamente estableciendo value a una cadena vacía:
 
-![](img/useRef.gif)
+![](src/useRef.gif)
 
 Cada vez que pulsamos submit, nuestra entrada se borra sin tener que borrarla nosotros manualmente.
 
