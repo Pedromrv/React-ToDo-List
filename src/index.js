@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+// renderiza o muestra nuestra app inyectándola en un index.html
+// encontrar y poner nuestra app en el elemento root (un div con el id "root")
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
